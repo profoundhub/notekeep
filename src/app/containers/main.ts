@@ -5,8 +5,6 @@ import { NaviBar } from '../ui';
   selector: 'main-container',
   directives: [NaviBar],
   templateUrl: 'app/containers/main.containers.html'
-
-
 })
 
 export class Main { }
