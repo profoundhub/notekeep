@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { Main } from './containers';
 
 @Component ({
   moduleId: module.id,
-  selector: 'app',
-  directives: [Main],
+  selector: 'navi-bar',
   providers: [HTTP_PROVIDERS],
-  templateUrl: './app/app.component.html'
+  styleUrls: ['app/ui/style.ui.css'],
+  templateUrl: 'app/ui/navibar.html'
 })
 
-export class App { }
+export class NaviBar { }

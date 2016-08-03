@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
+import { NaviBar } from '../ui';
 
 @Component ({
   selector: 'main-container',
-  template: `
-    <div>
-      <main class="main">
-        main content will go here
-      </main>
-    </div>
-	`,
+  directives: [NaviBar],
+  templateUrl: 'app/containers/main.containers.html'
+
+
 })
 
 export class Main { }
