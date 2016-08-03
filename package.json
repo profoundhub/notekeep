@@ -7,7 +7,7 @@
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src"
   },
-  "author": "",
+  "author": "Daniel Lim",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
