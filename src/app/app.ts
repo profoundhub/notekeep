@@ -10,4 +10,4 @@ import { Main } from './containers';
   templateUrl: './app/app.component.html'
 })
 
-export class App { }
+export class App {}

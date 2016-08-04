@@ -8,10 +8,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class NoteCard {
-  // note = {title: 'Title of Note', value: 'Check eMail'}
   @Input() note = {};
   @Output() checked = new EventEmitter();
-
   showChecked: boolean = false;
 
   toggleCheck() {
