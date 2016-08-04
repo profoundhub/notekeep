@@ -9,6 +9,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node"
   },
+  "filesGlob": [
+        "**/*.ts",
+        "**/*.tsx",
+        "!node_modules/**"
+  ],
   "exclude": [
     "typings/index.d.ts",
     "node_modules"
