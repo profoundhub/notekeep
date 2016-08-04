@@ -9,4 +9,6 @@ import { NoteCard } from '../ui/notecards';
   templateUrl: 'app/containers/notes-container.html'
 })
 
-export class Notes { }
+export class Notes {
+  note = {title: 'Add New Note', value: 'Note Details'}
+}
