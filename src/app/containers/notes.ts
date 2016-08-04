@@ -19,22 +19,20 @@ export class Notes implements OnDestroy {
 
   constructor(
     private noteService: NoteService,
-    private store: Store)
+    private store: Store
   ) {
-    this.store.changes.pluck('notes').subscribe((notes: any) => this.notes = notes);
+    this.store.changes.pluck('notes')
+    .subscribe((notes: any) => this.notes = notes);
+
     this.noteService.getNotes().subscribe();
   }
 
   onNoteChecked(note) {
-    this.noteService.completeNote(note)
-    .subscribe(note => {
-      const i = this.notes.findIndex(localNote => localNote.id === note.id);
-        this.notes.splice(i, 1);
-    });
+    this.noteService.completeNote(note).subscribe();
   }
 
   onCreateNote(note) {
-    this.noteService.createNote(note).subscribe(note => this.notes.push(note));
+    this.noteService.createNote(note).subscribe();
   }
 
   ngOnDestroy() {
