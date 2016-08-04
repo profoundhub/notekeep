@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: 'app/components/note-creator.component.html'
 })
 
-export class NoteCreator { }
+export class NoteCreator {
+    newNote = {
+      title: '',
+      value: ''
+    }
+}

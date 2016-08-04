@@ -1,8 +1,12 @@
 <div class="note-creator shadow-2">
+        <pre>
+            {{ newNote | json }}
+        </pre>
       <form class="row">
         <input
           type="text"
           [(ngModel)]="newNote.title"
+          (ngModelChange)="newNote.title = $event"
           name="newNoteTitle"
           placeholder="Title"
           class="col-xs-10 title"
@@ -10,6 +14,7 @@
         <input
           type="text"
           [(ngModel)]="newNote.value"
+          (ngModelChange)="newNote.value = $event"
           name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
