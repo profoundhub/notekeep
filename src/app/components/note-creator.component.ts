@@ -16,6 +16,11 @@ export class NoteCreator {
     };
 
     onCreateNote() {
-      console.log("Submit + Done")
+      // console.log("Submit + Done");
+      const { title, value } = this.newNote;
+
+      if (title && value) {
+          this.createNote.next({title, value})
+      }
     }
 }
