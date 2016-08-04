@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { NoteCard } from '../ui/notecards';
+import { NoteCreator } from '../components/note-creator.component';
 
 @Component ({
   moduleId: module.id,
-  directives: [NoteCard],
+  directives: [NoteCard, NoteCreator],
   selector: 'notes-container',
   styleUrls: ['app/containers/notes-container.css'],
   templateUrl: 'app/containers/notes-container.html'
