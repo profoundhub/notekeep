@@ -1,5 +1,6 @@
 <div
-    class="note-card row shadow-1"
+  [ngStyle]="{'background-color': note.color}"
+  class="note-card row shadow-1"
     (mouseenter)="toggle()"
     (mouseleave)="toggle()">
 

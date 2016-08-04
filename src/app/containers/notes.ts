@@ -10,5 +10,5 @@ import { NoteCard } from '../ui/notecards';
 })
 
 export class Notes {
-  note = {title: 'Add New Note', value: 'Note Details'}
+  note = {title: 'Add New Note', value: 'Note Details', color: 'coral'};
 }
