@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component ({
   moduleId: module.id,
@@ -9,10 +9,16 @@ import { Component, Input } from '@angular/core';
 
 export class ColorPickr {
   @Input() colors: Array<string> = [];
-
+  @Output() selected = new EventEmitter();
   isSelectorVisible: boolean = false;
 
   showSelector(value: boolean) {
     this.isSelectorVisible = value;
   }
+
+  selectColor(color) {
+    this.showSelector(false);
+    this.selected.next(color);
+  }
+
 }

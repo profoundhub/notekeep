@@ -5,8 +5,7 @@
       class="color"
       *ngFor="let color of colors"
       [ngStyle]="{'background-color': color}"
-    >
-
-    </div>
+      (click)="selectColor(color)"
+    ></div>
   </div>
 </div>
