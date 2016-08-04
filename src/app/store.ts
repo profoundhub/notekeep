@@ -14,11 +14,14 @@ export interface Note {
 }
 
 export interface State {
-  notes: Note[];
+  notes: Array<Note>;
+  user: Object;
+
 }
 
 const defaultState = {
-  notes: []
+  notes: [],
+  user: {}
 }
 
 const _store = new BehaviorSubject<State>(defaultState);

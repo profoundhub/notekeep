@@ -6,7 +6,7 @@ export const routes: RouterConfig = [
   {
     path: '',
     component: Main,
-    canActivate: [],
+    canActivate: [AuthService],
     children: [
       { path: '', component: Notes },
       { path: 'about', component: About }
