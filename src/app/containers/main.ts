@@ -6,6 +6,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 @Component ({
   selector: 'main-container',
   directives: [NaviBar, Notes, ...ROUTER_DIRECTIVES],
+  styleUrls: [''],
   templateUrl: 'app/containers/main.containers.html'
 })
 
