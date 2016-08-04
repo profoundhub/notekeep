@@ -12,12 +12,13 @@ import { NoteCard } from '../ui/notecards';
 export class Notes {
   notes = [
     {title: 'Add New Note', value: 'Note Details', color: 'coral'},
-    {title: 'Add New Note', value: 'Note Details', color: 'coral'},
-    {title: 'Add New Note', value: 'Note Details', color: 'coral'}
+    {title: 'Add New Note', value: 'Note Details', color: 'lightblue'},
+    {title: 'Add New Note', value: 'Note Details', color: 'azure'}
   ]
 
-  onNoteChecked(note) {
-    console.log(note);
+  onNoteChecked(note, i) {
+    // console.log(note);
+    this.notes.splice(i, 1);
   }
 
 }
