@@ -7,8 +7,9 @@
       <note-card
         class="col-xs-4"
           [note]="note"
-          (checked)="onNoteChecked()"
-          *ngFor="let note of notes"
+          *ngFor="let note of notes;
+          let i = index"
+          (checked)="onNoteChecked($event, i)"
       ></note-card>
     </div>
   </div>
