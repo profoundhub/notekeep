@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NoteCard } from '../ui/notecards';
 import { NoteCreator } from '../components/note-creator.component';
+import { NoteService } from '../services';
 
 @Component ({
   moduleId: module.id,
@@ -16,6 +17,8 @@ export class Notes {
     {title: 'Add New Note', value: 'Note Details', color: 'lightblue'},
     {title: 'Add New Note', value: 'Note Details', color: 'azure'}
   ];
+
+  constructor(privat noteService:NoteService) {}
 
   onNoteChecked(note, i) {
     this.notes.splice(i, 1);
