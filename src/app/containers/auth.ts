@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'auth-container',
-  templateUrl: 'auth.html'
+  templateUrl: './app/containers/auth.html'
 })
 
 export class Auth {}
