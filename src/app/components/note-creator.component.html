@@ -16,12 +16,10 @@
           class="col-xs-10"
           (focus)="toggle(true)"
         >
-        <div class="actions col-xs-12 row between-xs">
+        <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
           <button
-            *ngIf="fullForm"
             type="submit"
             class="btn-light"
-            (focus)="toggle(true)"
            >Done
           </button>
         </div>
