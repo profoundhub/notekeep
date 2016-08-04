@@ -12,11 +12,14 @@
           type="text"
           [(ngModel)]="newNote.value"
           name="newNoteValue"
-          placeholder="Take a note..."
+          placeholder="Take a Note ..."
           class="col-xs-10"
           (focus)="toggle(true)"
         >
         <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
+            <div class="col-xs-3">
+                <color-pickr></color-pickr>
+            </div>
           <button
             type="submit"
             class="btn-light"
