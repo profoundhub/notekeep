@@ -1,8 +1,8 @@
 <div
   [ngStyle]="{'background-color': note.color}"
   class="note-card row shadow-1"
-    (mouseenter)="toggle()"
-    (mouseleave)="toggle()">
+    (mouseenter)="toggleCheck()"
+    (mouseleave)="toggleCheck()">
 
   <div class="icon" *ngIf="showChecked" (click)="onChecked()">
     <i class="material-icons">check</i>

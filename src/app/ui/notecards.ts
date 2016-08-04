@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component ({
   moduleId: module.id,
@@ -9,14 +9,16 @@ import { Component, Input } from '@angular/core';
 
 export class NoteCard {
   // note = {title: 'Title of Note', value: 'Check eMail'}
-  @Input() note = {}
+  @Input() note = {};
+  @Output() checked = new EventEmitter();
+
   showChecked: boolean = false;
 
-  toggle() {
+  toggleCheck() {
     this.showChecked = !this.showChecked;
   }
 
   onChecked() {
-    console.log("clicked")
+    this.checked.next(this.note);
   }
 }
