@@ -3,6 +3,8 @@ import { NoteCard } from '../ui';
 import { NoteCreator } from '../components/note-creator.component';
 import { NoteService } from '../services';
 import { Store } from '../store';
+import 'rxjs/Rx';
+
 
 @Component ({
   moduleId: module.id,
@@ -13,11 +15,14 @@ import { Store } from '../store';
 })
 
 export class Notes implements OnDestroy {
-  notes = [];
+  notes = []
 
-
-  constructor(private noteService:NoteService) {
-    this.noteService.getNotes().subscribe(res => this.notes = res.data);
+  constructor(
+    private noteService: NoteService,
+    private store: Store)
+  ) {
+    this.store.changes.pluck('notes').subscribe((notes: any) => this.notes = notes);
+    this.noteService.getNotes().subscribe();
   }
 
   onNoteChecked(note) {
