@@ -5,9 +5,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class NoteService {
-
   path: string = '/notes';
-
   constructor(private apiService: ApiService) {}
 
   createNote(note) {
