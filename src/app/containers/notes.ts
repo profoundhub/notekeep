@@ -34,5 +34,5 @@ export class Notes implements OnDestroy {
   ngOnDestroy() {
     console.log('Destroyed!');
   }
-  
+
 }
