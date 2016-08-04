@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
-@Component({
-  selector: 'about-container',
-  template: `     <div class="about-container">
-      <h1>about page</h1>
-    </div>
-  `
-})
-export class About {}
+import { RouterConfig } from '@angular/router';
+import { Main, Notes, About } from './containers';
+
+export const routes: RouterConfig = [
+  {
+    path: '',
+    component: Main,
+    children: [
+      { path: '', component: Notes },
+      { path: 'about', component: About }
+    ]
+  },
+  { path: '**', redirectTo: '' }
+];

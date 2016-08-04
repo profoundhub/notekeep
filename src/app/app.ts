@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HTTP_PROVIDERS } from '@angular/http';
-import { Main } from './containers';
 
 @Component ({
   moduleId: module.id,
