@@ -3,16 +3,13 @@ import { ApiService } from './api';
 import { StoreHelper } from './store-helper';
 import 'rxjs/Rx';
 
-
 @Injectable()
 export class NoteService {
   path: string = '/notes';
-
   constructor(
     private storeHelper: StoreHelper,
     private apiService: ApiService
   ) {}
-
 
   createNote(note) {
     return this.apiService.post(this.path, note)
@@ -28,5 +25,5 @@ export class NoteService {
     return this.apiService.delete(`${this.path}/${note.id}`)
     .do(res => this.storeHelper.findAndDelete('notes', res.id));
   }
-  
+
 }

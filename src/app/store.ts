@@ -16,7 +16,6 @@ export interface Note {
 export interface State {
   notes: Array<Note>;
   user: Object;
-
 }
 
 const defaultState = {
