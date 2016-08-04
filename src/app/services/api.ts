@@ -33,29 +33,22 @@ import 'rxjs/add/observable/throw';
 
     // GET, POST & DEL.
     get(path: string): Observable<any> {
-      return this.http.get(`${this.api_url}${path}`, { headers: this.headers })
-      .map(this.checkForError).catch(err => Observable.throw(err))
+      return this.http.get(`${this.api_url}${path}`, { headers: this.headers }).map(this.checkForError).catch(err => Observable.throw(err))
       .map(this.getJson)
     }
 
     post(path: string, body): Observable<any> {
-      return this.http.post(
-        `${this.api_url}${path}`,
+      return this.http.post(`${this.api_url}${path}`,
         JSON.stringify(body),
-        { headers: this.headers }
-      )
-      .map(this.checkForError)
-      .catch(err => Observable.throw(err))
+          { headers: this.headers }
+      ).map(this.checkForError).catch(err => Observable.throw(err))
       .map(this.getJson)
     }
 
     delete(path: string): Observable<any> {
-      return this.http.delete(
-        `${this.api_url}${path}`,
+      return this.http.delete(`${this.api_url}${path}`,
         { headers: this.headers }
-      )
-      .map(this.checkForError)
-      .catch(err => Observable.throw(err))
+      ).map(this.checkForError).catch(err => Observable.throw(err))
       .map(this.getJson)
     }
 
