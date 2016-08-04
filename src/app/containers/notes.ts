@@ -18,7 +18,6 @@ export class Notes {
   ];
 
   onNoteChecked(note, i) {
-    // console.log(note);
     this.notes.splice(i, 1);
   };
 
