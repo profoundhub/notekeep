@@ -15,4 +15,9 @@ export class Notes {
     {title: 'Add New Note', value: 'Note Details', color: 'coral'},
     {title: 'Add New Note', value: 'Note Details', color: 'coral'}
   ]
+
+  onNoteChecked(note) {
+    console.log(note);
+  }
+
 }
