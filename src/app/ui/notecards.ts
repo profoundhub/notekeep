@@ -10,6 +10,12 @@ import { Component, Input } from '@angular/core';
 export class NoteCard {
   // note = {title: 'Title of Note', value: 'Check eMail'}
   @Input() note = {}
+  showChecked: boolean = false;
+
+  toggle() {
+    this.showChecked = !this.showChecked;
+  }
+
   onChecked() {
     console.log("clicked")
   }
