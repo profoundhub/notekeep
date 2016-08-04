@@ -2,6 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { NoteCard } from '../ui';
 import { NoteCreator } from '../components/note-creator.component';
 import { NoteService } from '../services';
+import { Store } from '../store';
 
 @Component ({
   moduleId: module.id,
