@@ -2,13 +2,14 @@
   position: relative;
 }
 .selector {
-  min-width: 120px;
+  min-width: 440px;
   border: 1px solid lightgrey;
   padding: 10px;
   background-color: #efefef;
   position: absolute;
   top: -50px;
   left: 0;
+  height: 50px;
 }
 .color {
   height: 30px;
