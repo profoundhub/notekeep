@@ -15,6 +15,8 @@ export class NoteCreator {
       value: ''
     };
 
+    fullForm: boolean = false;
+
     onCreateNote() {
       // console.log("Submit + Done");
       const { title, value } = this.newNote;
@@ -31,4 +33,9 @@ export class NoteCreator {
         value: ''
       }
     }
+
+    toggle(value:boolean) {
+      this.fullForm = value;
+    }
+
 }

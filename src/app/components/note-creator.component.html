@@ -6,6 +6,7 @@
           name="newNoteTitle"
           placeholder="Title"
           class="col-xs-10 title"
+          *ngIf="fullForm"
         >
         <input
           type="text"
@@ -13,13 +14,15 @@
           name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
+          (focus)="toggle(true)"
         >
         <div class="actions col-xs-12 row between-xs">
           <button
+            *ngIf="fullForm"
             type="submit"
             class="btn-light"
-           >
-            Done
+            (focus)="toggle(true)"
+           >Done
           </button>
         </div>
       </form>
