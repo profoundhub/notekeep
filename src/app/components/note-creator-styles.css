@@ -1,0 +1,18 @@
+.note-creator {
+    padding: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.SpaceNoteCards {
+    margin-top: 25px;
+}
+
+.title {
+    font-weight: bold;
+    color: rgba(0,0,0,0.8);
+}
+
+.full {
+    height: 100px;
+}
