@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NaviBar } from '../ui';
 import { Notes } from './notes';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component ({
   selector: 'main-container',
-  directives: [NaviBar, Notes],
+  directives: [NaviBar, Notes, ...ROUTER_DIRECTIVES],
   templateUrl: 'app/containers/main.containers.html'
 })
 
