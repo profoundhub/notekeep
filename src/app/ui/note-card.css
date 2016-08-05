@@ -31,3 +31,6 @@
   border-radius: 100%;
   cursor: pointer;
 }
+.cardValues {
+  overflow: hidden;
+}

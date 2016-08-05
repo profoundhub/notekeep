@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FORM_DIRECTIVES } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FORM_DIRECTIVES } from '@angular/forms';
 import { AuthService } from '../services/auth-service';
 
 @Component({
@@ -12,12 +12,13 @@ import { AuthService } from '../services/auth-service';
 
 export class Auth {
   user = {
+    userId: '',
     email: '',
     password: ''
   };
 
   mode: string = 'signin';
-  modeText: string;
+  modeText: string = 'sign-up';
   linkText: string = 'Don\'t have an account?';
 
   constructor(private authService: AuthService, private router: Router) {}
