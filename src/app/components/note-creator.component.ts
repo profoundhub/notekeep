@@ -14,6 +14,7 @@ export class NoteCreator {
     colors: Array<string> = ['#FFCDD2', '#F8BBD0', '#E1BEE7', '#FF5252', '#FF4081', '#E040FB', '#D1C4E9', '#C5CAE9', '#BBDEFB', '#B3E5FC'];
 
     newNote = {
+      userId: '',
       title: '',
       value: '',
       color: 'white'
@@ -27,16 +28,17 @@ export class NoteCreator {
 
     onCreateNote() {
       // console.log("Submit + Done");
-      const { title, value, color } = this.newNote;
+      const { userId, title, value, color } = this.newNote;
 
       if (title && value) {
-          this.createNote.next({title, value, color});
+          this.createNote.next({userId, title, value, color});
           this.resetCreator();
       }
     }
 
     resetCreator() {
       this.newNote = {
+        userId: '',
         title: '',
         value: '',
         color: 'white'
@@ -46,5 +48,4 @@ export class NoteCreator {
     toggle(value:boolean) {
       this.fullForm = value;
     }
-
 }
