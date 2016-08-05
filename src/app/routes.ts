@@ -1,11 +1,11 @@
 import { RouterConfig } from '@angular/router';
-import { Main, Notes, About, Auth } from './containers';
+import { MainContainers, Notes, About, Auth } from './containers';
 import { AuthService } from './services';
 
 export const routes: RouterConfig = [
   {
     path: '',
-    component: Main,
+    component: MainContainers,
     canActivate: [AuthService],
     children: [
       { path: '', component: Notes },

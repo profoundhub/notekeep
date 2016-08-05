@@ -10,4 +10,4 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   templateUrl: 'app/containers/main.containers.html'
 })
 
-export class Main { }
+export class MainContainers { }
