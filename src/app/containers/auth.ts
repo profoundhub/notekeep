@@ -38,5 +38,4 @@ export class Auth {
     this.authService.authenticate(this.mode, this.user)
     .subscribe(() => this.router.navigate(['']))
   }
-
 }
