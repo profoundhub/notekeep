@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+let path = require('path');
+const webpack = require('webpack');
 
 var config = {
   cache: true,
@@ -7,11 +7,11 @@ var config = {
   entry: {
     polyfills: './src/polyfills',
     vendor:    './src/vendor',
-    main:      './src/main'
+    main:      './src/main',    
   },
 
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '/dist/'),
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js'
