@@ -52,5 +52,6 @@ Temporary Items
 specs.js
 update_all_branches
 
-spec.entry.js
 webpack.spec.js
+karma.conf.js
+specs.map
