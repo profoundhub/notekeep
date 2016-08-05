@@ -9,7 +9,7 @@ import 'rxjs/Rx';
 @Injectable()
 
 export class AuthService implements CanActivate {
-  PDL_KEY: string = 'retain_token';
+  PDL_KEY: string = 'notekeeper_token';
   PDL: string = '';
 
   constructor(

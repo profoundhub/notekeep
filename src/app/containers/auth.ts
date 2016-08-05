@@ -12,27 +12,30 @@ import { AuthService } from '../services/auth-service';
 
 export class Auth {
   user = {
-    password: '',
-    email: ''
+    email: '',
+    password: ''
   };
 
-  mode: string = 'sign-in';
+  mode: string = 'signin';
+  modeText: string;
   linkText: string = 'Don\'t have an account?';
 
-  constructor(private auth: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   changeMode() {
-    if (this.mode === 'sign-in') {
-      this.mode = 'sign-up'
+    if (this.mode === 'signin') {
+      this.mode = 'signup'
+      this.modeText = 'sign-up'
       this.linkText = 'Already have an Account?'
     } else {
-      this.mode = 'sign-in';
+      this.mode = 'signin';
+      this.modeText = 'sign-in';
       this.linkText = 'Don\'t have an Account?';
     }
   }
 
   authenticate() {
-    this.auth.authenticate(this.mode, this.user)
+    this.authService.authenticate(this.mode, this.user)
     .subscribe(() => this.router.navigate(['']))
   }
 
