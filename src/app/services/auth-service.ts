@@ -7,10 +7,8 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 @Injectable()
-
 export class AuthService implements CanActivate {
   PDL_KEY: string = 'notekeeper_token';
-  PDL: string = '';
 
   constructor(
      private storeHelper: StoreHelper,
@@ -30,7 +28,7 @@ export class AuthService implements CanActivate {
   }
 
   isAuthorized(): boolean {
-    return Boolean(window.localStorage.getItem(this.PDL));
+    return Boolean(window.localStorage.getItem(this.PDL_KEY));
   }
 
   canActivate(): boolean {
@@ -40,7 +38,7 @@ export class AuthService implements CanActivate {
       this.router.navigate(['', 'auth']);
     }
 
-    return isAuth;
+    return isAuth
   }
 
   authenticate(path, creds): Observable<any> {
