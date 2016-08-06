@@ -5,7 +5,6 @@ import { NoteService } from '../services';
 import { Store } from '../store';
 import 'rxjs/Rx';
 
-
 @Component ({
   moduleId: module.id,
   selector: 'notes-container',
