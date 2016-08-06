@@ -19,6 +19,6 @@
     "node_modules"
   ],
   "compileOnSave": false,
-  "buildOnSave": true,
+  "buildOnSave": false,
   "atom": { "rewriteTsconfig": false }
 }
