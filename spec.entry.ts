@@ -16,9 +16,6 @@ import 'rxjs/add/observable/throw';
 import { setBaseTestProviders } from '@angular/core/testing';
 import { TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS, TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS } from '@angular/platform-browser-dynamic/testing';
 
-import './src/app/services/api.spec';
-import './src/app/ui/note-card.spec';
-
 setBaseTestProviders(
   TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
   TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
