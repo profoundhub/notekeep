@@ -7,7 +7,7 @@ var config = {
   entry: {
     polyfills: './src/polyfills',
     vendor:    './src/vendor',
-    main:      './src/main',    
+    main:      './src/main',
   },
 
   output: {
@@ -28,17 +28,14 @@ var config = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
   ],
-
   resolve: {
     extensions: ['', '.ts', '.js', '.json'],
     modulesDirectories: ['node_modules']
   },
-
   devServer: {
     historyApiFallback: true,
     watchOptions: { aggregateTimeout: 300, poll: 1000 }
   },
-
   node: {
     global: true,
     process: true,
@@ -51,4 +48,5 @@ var config = {
     setTimeout: true
   }
 };
+
 module.exports = config;
