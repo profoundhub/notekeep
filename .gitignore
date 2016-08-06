@@ -51,7 +51,3 @@ Temporary Items
 /npm-debug.log
 specs.js
 update_all_branches
-
-webpack.spec.js
-karma.conf.js
-specs.map
