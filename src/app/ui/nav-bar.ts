@@ -5,7 +5,7 @@ import { AuthService } from '../services';
 @Component ({
   moduleId: module.id,
   selector: 'navi-bar',
-  directives: [...ROUTER_DIRECTIVES],
+  directives: [ ...ROUTER_DIRECTIVES ],
   styleUrls: ['app/ui/style.ui.css'],
   templateUrl: 'app/ui/navibar.html'
 })
