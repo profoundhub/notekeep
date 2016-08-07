@@ -3,8 +3,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component ({
   moduleId: module.id,
   selector: 'note-card',
-  styleUrls: ['app/ui/note-card.css'],
-  templateUrl: 'app/ui/note-card.html'
+  templateUrl: 'app/ui/note-card.html',
+  styleUrls: ['app/ui/note-card.css']
 })
 
 export class NoteCard {
