@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var path = require('path');
 var webpack = require('webpack');
 
@@ -52,7 +52,7 @@ var config = {
   }
 };
 module.exports = config;
-=======
+
 // Karma configuration
 // Generated on Thu Aug 04 2016 22:14:56 GMT-0400 (Eastern Daylight Time)
 
@@ -121,4 +121,3 @@ module.exports = function(config) {
     concurrency: Infinity
   })
 }
->>>>>>> master
